@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="NPR.npr.test.SelectBoardTest">
+        <methods>
+          <include name="startBrowser"/>
+          <include name="mainTest"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- NPR.npr.test.SelectBoardTest -->
+      <class name="NPR.npr.test.LoginTest">
+        <methods>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- NPR.npr.test.LoginTest -->
+      <class name="NPR.npr.test.MainTest">
+        <methods>
+          <include name="mainTest"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- NPR.npr.test.MainTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
