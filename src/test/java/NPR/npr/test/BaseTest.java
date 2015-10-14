@@ -27,7 +27,7 @@ public class BaseTest {
 		try{
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {}
-		driver.close();
+		driver.quit();
 	}
 	
 	public LoginPage navigate(String url) {
