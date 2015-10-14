@@ -25,22 +25,18 @@ public class SelectBoard {
 	@FindBy(how = How.NAME, using="reserveFlights")
 	private WebElement  btnContinue;
 	
-	@FindBy(how = How.XPATH , using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[1]/tbody/tr[10]/td/font/font/b")
-	private WebElement  costOut;
-	
-	@FindBy(how = How.XPATH , using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[2]/tbody/tr[6]/td/font/font/b")
-	private WebElement  costBack;
+
 	//элементы для проверок 
-	@FindBy(how = How.XPATH , using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[1]/tbody/tr[1]/td/table/tbody/tr[2]/td[1]/b/font")
+	@FindBy(how = How.XPATH , using="(.//td/b)[1]")
 	private WebElement  wayToChose;
 	
-	@FindBy(how = How.XPATH , using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[1]/tbody/tr[1]/td/table/tbody/tr[2]/td[2]/b/font")
+	@FindBy(how = How.XPATH , using="(.//td/b)[2]")
 	private WebElement  dateToChose;
 	
-	@FindBy(how = How.XPATH , using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[2]/tbody/tr[1]/td/table/tbody/tr[2]/td[1]/b/font")
+	@FindBy(how = How.XPATH , using="(.//td/b)[3]")
 	private WebElement  wayOutChose;
 	
-	@FindBy(how = How.XPATH , using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table[2]/tbody/tr[1]/td/table/tbody/tr[2]/td[2]/b/font")
+	@FindBy(how = How.XPATH , using="(.//td/b)[4]")
 	private WebElement  dateOutChose;
 
 	//проверки страницы Select a Flight

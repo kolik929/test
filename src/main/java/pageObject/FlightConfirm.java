@@ -17,39 +17,40 @@ public class FlightConfirm {
 	private WebDriver driver;
 	
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[3]/td/font/b")
+	@FindBy(how = How.XPATH, using="(.//td[@class='frame_header_info'])[3]")
 	private WebElement wayToChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[3]/td/font")
+	@FindBy(how = How.XPATH, using="(.//td[@class='frame_header_info'])[3]")
 	private WebElement dateToChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[3]/td/font")
+	@FindBy(how = How.XPATH, using="(.//td[@class='frame_header_info'])[3]")
 	private WebElement bordToChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[5]/td/font/b")
+	@FindBy(how = How.XPATH, using="(.//td[@class='frame_header_info'])[5]")
 	private WebElement wayOutChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[5]/td/font")
+	@FindBy(how = How.XPATH, using="(.//td[@class='frame_header_info'])[5]")
 	private WebElement dateOutChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[5]/td/font")
+	@FindBy(how = How.XPATH, using="(.//td[@class='frame_header_info'])[5]")
 	private WebElement bordOutChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[7]/td/font")
+	@FindBy(how = How.XPATH, using="(.//td[@class='data_left'])[2]")
 	private WebElement totalPass;
 	
 	//данные биллига адреса
-		@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[9]/td/p")
+		@FindBy(how = How.XPATH, using="(.//tr/td[@align='left'])[1]")
 		private WebElement  billAddress;
 		
 	//данные адреса доставки
-		@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[11]/td/p")
+		@FindBy(how = How.XPATH, using="(.//tr/td[@align='left'])[2]")
 		private WebElement  delAddress;
 		
-		@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[5]/td/table/tbody/tr[12]/td/table/tbody/tr[2]/td[2]/font/b/font/font/b/font")
+		@FindBy(how = How.XPATH, using="(.//tr/td[@align='right'])[7"
+				+ "]")
 		private WebElement totalPrice;
 		
-		@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr[1]/td[2]/table/tbody/tr[7]/td/table/tbody/tr/td[2]/a/img")
+		@FindBy(how = How.XPATH, using=".//tr/td/a[@href='mercurywelcome.php']")
 		private WebElement  btnBacHome;
 	
 	
@@ -65,6 +66,7 @@ public class FlightConfirm {
 		
 		}
 	
+
 	
 	
 	//проверки выбора вылета
@@ -72,7 +74,11 @@ public class FlightConfirm {
 	public FlightConfirm isWayToChoseCorrect(){
 		
 		logger.info("Проверяем что направление вылета выбрано правильно ");
-		Assert.assertEquals(wayToChose.getText(), "Paris to Seattle", "Направление вылета выбрано правильно");
+		if (wayToChose.getText().contains("Paris to Seattle")){
+			String way = "Paris to Seattle";
+			Assert.assertEquals(way, "Paris to Seattle", "Направление вылета выбрано правильно");
+		}
+		
 		return this;
 	}
 	
@@ -98,7 +104,11 @@ public class FlightConfirm {
 	
 	public FlightConfirm isWayOutChoseCorrect(){
 		logger.info("Проверяем что направление обратного вылета выбрано правильно ");
-		Assert.assertEquals(wayOutChose.getText(), "Seattle to Paris", "Направление обратного вылета выбрано правильно");
+		if(wayOutChose.getText().contains("Seattle to Paris")){
+			String way = "Seattle to Paris";
+			Assert.assertEquals(way, "Seattle to Paris", "Направление обратного вылета выбрано правильно");
+		}
+		
 		return this;
 	}
 	

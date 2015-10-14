@@ -98,7 +98,7 @@ public class PrivateInfo {
 	private WebElement  delCountry;
 //кнопка и чек бокс тот же адрес доставки
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[15]/td[2]/input")
+	@FindBy(how = How.XPATH, using="(.//td/input[@value='checkbox'])[2]")
 	private WebElement  boxSemeAdres;
 	
 	@FindBy(how = How.NAME, using="buyFlights")
@@ -109,47 +109,47 @@ public class PrivateInfo {
 	
 	//данные для проверок отправления
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[1]/td[1]/b/font")
+	@FindBy(how = How.XPATH, using="(.//td/b)[1]")
 	private WebElement wayToChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[1]/td[2]/b/font")
+	@FindBy(how = How.XPATH, using="(.//td/b)[2]")
 	private WebElement dateToChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[3]/td[1]/font/b")
+	@FindBy(how = How.XPATH, using="(//td[@class='data_left'])[1]")
 	private WebElement bordToChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[3]/td[2]/font")
+	@FindBy(how = How.XPATH, using="(//td[@class='data_center_mono'])[1]")
 	private WebElement classToChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[3]/td[3]/font")
+	@FindBy(how = How.XPATH, using="(//td[@class='data_center'])[1]")
 	private WebElement priceToChose;
 	
 	
 	// данные для проверок обратной дороги
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[4]/td[1]/b/font")
+	@FindBy(how = How.XPATH, using="(.//td/b)[3]")
 	private WebElement wayOutChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[4]/td[2]/b/font")
+	@FindBy(how = How.XPATH, using="(.//td/b)[4]")
 	private WebElement dateOutChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[6]/td[1]/font/font/font[1]/b")
+	@FindBy(how = How.XPATH, using="(//td[@class='data_left'])[4]")
 	private WebElement bordOutChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[6]/td[2]/font")
+	@FindBy(how = How.XPATH, using="(//td[@class='data_center_mono'])[4]")
 	private WebElement classOutChose;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[6]/td[3]/font")
+	@FindBy(how = How.XPATH, using="(//td[@class='data_center'])[3]")
 	private WebElement priceOutChose;
 	
 
 	//элементы для остальных проверок
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[7]/td[2]/font")
+	@FindBy(how = How.XPATH, using="(//td[@class='data_left'][@align='center'])[1]")
 	private WebElement totalPass;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[8]/td[2]/font")
+	@FindBy(how = How.XPATH, using="(//td[@class='data_left'][@align='center'])[2]")
 	private WebElement taxes;
 	
-	@FindBy(how = How.XPATH, using="/html/body/div/table/tbody/tr/td[2]/table/tbody/tr[4]/td/table/tbody/tr/td[2]/table/tbody/tr[5]/td/form/table/tbody/tr[2]/td/table/tbody/tr[9]/td[2]/font/b")
+	@FindBy(how = How.XPATH, using="(//td[@class='data_left'][@align='center'])[3]")
 	private WebElement totalPrice;
 	
 	
